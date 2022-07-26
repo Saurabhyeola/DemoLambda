@@ -1,0 +1,9 @@
+phases: 
+ install:
+         commands:
+                 - aws cloudformation package --template-file samTemplate.yaml --s3-bucket meteor350 --output-template-file outputSamTemplate.yaml
+artfacts: 
+ type: zip
+ files: 
+                 - samTemplate.yaml
+                 - outputSamTemplate.yaml 
